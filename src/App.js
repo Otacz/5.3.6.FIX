@@ -1,4 +1,3 @@
-
 import React, { useState } from "react";
 import ChatList from "./components/ChatList";
 import ChatWindow from "./components/ChatWindow";
@@ -14,12 +13,9 @@ function App() {
   const [selectedChatId, setSelectedChatId] = useState(null);
   const [designChat, setDesignChat] = useState(null);
 
-  const handleLogin = (username, password) => {
-    if (username === "admin" && password === "heslo123") {
-      setIsLoggedIn(true);
-    } else {
-      alert("Špatné přihlašovací údaje");
-    }
+  const handleLogin = (userId) => {
+    console.log("Přihlášen:", userId);
+    setIsLoggedIn(true);
   };
 
   const handleNewChat = () => {
